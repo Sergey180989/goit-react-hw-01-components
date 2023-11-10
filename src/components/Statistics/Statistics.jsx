@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import { Container, List, StatLi, Title } from './StatisticsStyled';
 
 export function Statistics({ stats, title }) {
