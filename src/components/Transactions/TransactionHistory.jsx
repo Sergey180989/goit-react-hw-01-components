@@ -20,15 +20,13 @@ export function Transactions({ data }) {
       </thead>
 
       <tbody>
-        {data.map((data, index) => {
-          return (
-            <TableRow key={data.id} odd={index % 2 === 0}>
-              <TableData>{data.type}</TableData>
-              <TableData>{data.amount}</TableData>
-              <TableData>{data.currency}</TableData>
-            </TableRow>
-          );
-        })}
+        {data.map(({ id, type, amount, currency }) => (
+          <TableRow key={id}>
+            <TableData>{type}</TableData>
+            <TableData>{amount}</TableData>
+            <TableData>{currency}</TableData>
+          </TableRow>
+        ))}
       </tbody>
     </TransTable>
   );

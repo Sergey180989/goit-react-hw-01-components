@@ -2,24 +2,30 @@ import React from 'react';
 import 'modern-normalize';
 
 import { Profile } from './Profile/Profile';
-import user from '../components/data/user.json';
+import user from '../data/user.json';
 
 import { Statistics } from './Statistics/Statistics';
-import stats from '../components/data/data.json';
+import stats from '../data/data.json';
 
-import { Friends } from './Friends/Friends';
-import friendList from '../components/data/friends.json';
+import { FriendList } from './FriendList/FriendsList';
+import friends from '../data/friends.json';
 
 import { Transactions } from './Transactions/TransactionHistory';
-import transactions from '../components/data/transactions.json';
+import transactions from '../data/transactions.json';
 
 export const App = () => {
   return (
     <div>
-      <Profile user={user} />
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
       <Statistics stats={stats} title="Upload stats" />
       <Statistics stats={stats} />
-      <Friends list={friendList} />
+      <FriendList friends={friends} />
       <Transactions data={transactions} />
     </div>
   );

@@ -8,11 +8,11 @@ export function Statistics({ stats, title }) {
       {title && <Title>{title}</Title>}
 
       <List>
-        {stats.map(object => {
+        {stats.map(({ id, label, percentage }) => {
           return (
-            <StatLi key={object.id}>
-              <span>{object.label}</span>
-              <span>{object.percentage}%</span>
+            <StatLi key={id}>
+              <span>{label}</span>
+              <span>{percentage}%</span>
             </StatLi>
           );
         })}

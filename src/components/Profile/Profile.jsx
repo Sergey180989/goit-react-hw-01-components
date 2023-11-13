@@ -11,8 +11,7 @@ import {
   UserName,
 } from './ProfileStyled';
 
-export function Profile({ user }) {
-  const { username, tag, location, avatar, stats } = user;
+export function Profile({ username, tag, location, avatar, stats }) {
   return (
     <Card>
       <Description>
