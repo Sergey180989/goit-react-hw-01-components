@@ -30,18 +30,10 @@ export const FriendsItem = styled.li`
   }
 `;
 
-export const StatusCircleOnLine = styled.span`
+export const StatusCircle = styled.span`
   display: block;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: green;
-`;
-
-export const StatusCircleOffLine = styled.span`
-  display: block;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: red;
+  background-color: ${({ $isOnline }) => ($isOnline ? 'green' : 'red')};
 `;

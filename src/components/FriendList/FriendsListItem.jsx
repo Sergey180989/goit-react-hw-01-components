@@ -1,12 +1,8 @@
-import {
-  FriendsItem,
-  StatusCircleOnLine,
-  StatusCircleOffLine,
-} from './FriendsStyled';
+import { FriendsItem, StatusCircle } from './FriendsStyled';
 
 export const FriendsListItem = ({ isOnline, avatar, name }) => (
   <FriendsItem>
-    {isOnline ? <StatusCircleOnLine /> : <StatusCircleOffLine />}
+    <StatusCircle $isOnline={isOnline} />
 
     <img src={avatar} alt={name} width={50} />
     <p>{name}</p>
